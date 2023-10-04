@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Регистрация</title>
+
+    {% load static %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/account/account.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h2>Регистрация</h2>
+        <form method="post">
+            <label for="username">Имя пользователя:</label>
+            <input type="text" id="username" name="username" required><br>
+            
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" name="password" required><br>
+            
+            <label for="confirm_password">Подтвердите пароль:</label>
+            <input type="password" id="confirm_password" name="confirm_password" required><br>
+            
+            <input type="submit" value="Зарегистрироваться">
+        </form>
+    </div>
+</body>
+</html>
