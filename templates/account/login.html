@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Авторизация</title>
+    <title>Authorization</title>
 
     {% load static %}
 
@@ -9,15 +9,13 @@
 </head>
 <body>
     <div class="container">
-        <h2>Авторизация</h2>
+        <h2>Authorization</h2>
         <form method="post">
-            <label for="username">Имя пользователя:</label>
-            <input type="text" id="username" name="username" required><br>
+
+            {% csrf_token %}
+            {{ form }}
             
-            <label for="password">Пароль:</label>
-            <input type="password" id="password" name="password" required><br>
-            
-            <input type="submit" value="Войти">
+            <input type="submit" value="Login">
         </form>
     </div>
 </body>

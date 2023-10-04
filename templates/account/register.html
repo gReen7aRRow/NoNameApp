@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Регистрация</title>
+    <title>Registration</title>
 
     {% load static %}
 
@@ -9,18 +9,13 @@
 </head>
 <body>
     <div class="container">
-        <h2>Регистрация</h2>
+        <h2>Registration</h2>
         <form method="post">
-            <label for="username">Имя пользователя:</label>
-            <input type="text" id="username" name="username" required><br>
             
-            <label for="password">Пароль:</label>
-            <input type="password" id="password" name="password" required><br>
-            
-            <label for="confirm_password">Подтвердите пароль:</label>
-            <input type="password" id="confirm_password" name="confirm_password" required><br>
-            
-            <input type="submit" value="Зарегистрироваться">
+            {% csrf_token %}
+            {{ form }}
+
+            <input type="submit" value="Create user">
         </form>
     </div>
 </body>
