@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'debug_toolbar',
     'apps.main',
     'apps.account',
+    'apps.personality',
 ]
 
 MIDDLEWARE = [
@@ -78,7 +79,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'django_app.wsgi.application'
 
-LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = '/profile'
 
 
 # Database

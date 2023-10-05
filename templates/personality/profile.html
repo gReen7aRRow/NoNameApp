@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% load static %}
+
+    <link rel="stylesheet" href="{% static 'css/personality/profile.css' %}">
+    <title>Личный профиль</title>
+</head>
+<body>
+    <div class="profile-container">
+        <div class="profile-header">
+            <img src="https://sopranoclub.ru/images/memy-na-avu-275-memnyh-avatarok/file56870.jpeg" alt="Аватар" class="avatar">
+            <h1>{{ user.username }}</h1>
+        </div>
+        <div class="profile-description">
+            {% if user.profile.description %}
+                <p>{{ user.profile.description }}</p>
+            {% else %}
+                <p>Добавить описание.</p>
+            {% endif %}
+        </div>
+        <div class="profile-posts">
+            <h2>Посты пользователя</h2>
+            <ul>
+                <li>Пост 1</li>
+                <li>Пост 2</li>
+                <li>Пост 3</li>
+                <!-- Добавьте другие посты по мере необходимости -->
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
