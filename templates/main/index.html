@@ -1,16 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    bla
-    <a href="{% url 'profile' %}">profile</a>
-    <a href="{% url 'login' %}">login</a>
-    <a href="{% url 'register' %}">register</a>
-    <a href="{% url 'logout' %}">logout</a>
-    {{ user.username }}
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>MyMain</title>
+{% endblock %}
+
+{% block content %}
+    <div class="main-content">
+        <h1>Добро пожаловать на наш сайт!</h1>
+        <p>Здесь вы найдете полезную информацию и многое другое.</p>
+        <a href="other_page.html" class="main-button">Перейти на другую страницу</a>
+    </div>
+{% endblock %}

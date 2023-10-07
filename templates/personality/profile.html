@@ -1,15 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% extends 'base.html' %}
 
-    {% load static %}
+{% block title %}
+    <title>MyProfile</title>
+{% endblock %}
 
-    <link rel="stylesheet" href="{% static 'css/personality/profile.css' %}">
-    <title>Личный профиль</title>
-</head>
-<body>
+{% block content %}
     <div class="profile-container">
         <div class="profile-header">
             <img src="https://sopranoclub.ru/images/memy-na-avu-275-memnyh-avatarok/file56870.jpeg" alt="Аватар" class="avatar">
@@ -23,14 +18,12 @@
             {% endif %}
         </div>
         <div class="profile-posts">
-            <h2>Посты пользователя</h2>
+            <h2>MyMonsters</h2>
             <ul>
                 <li>Пост 1</li>
                 <li>Пост 2</li>
                 <li>Пост 3</li>
-                <!-- Добавьте другие посты по мере необходимости -->
             </ul>
         </div>
     </div>
-</body>
-</html>
+{% endblock %}

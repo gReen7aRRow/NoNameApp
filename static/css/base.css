@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.site-header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.logo a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.nav-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-menu li {
+    margin-right: 20px;
+}
+
+.nav-menu a {
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.menu-link {
+    text-decoration: none;
+    background-color: #6c61cf;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s;
+    display: inline-block;
+}
+
+.menu-link:hover {
+    background-color: #4c4492;
+    color: #fff;
+}
+
+
+.auth-link {
+    text-decoration: none;
+    background-color: #d9534f;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s;
+    display: inline-block;
+}
+
+.auth-link:hover {
+    background-color: #c9302c;
+    color: #fff;
+}
