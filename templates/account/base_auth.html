@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% block title %}{% endblock %}
+
+    {% load static %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/account/account.css' %}">
+</head>
+<body>
+    <div class="container">
+
+        {% block form %}{% endblock %}
+        
+    </div>
+</body>
+</html>
