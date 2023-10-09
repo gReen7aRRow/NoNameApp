@@ -6,20 +6,14 @@
 
 {% block content %}
     <div class="product-list">
-        <div class="product-card">
-            <img src="https://freestuff.co.uk/wp-content/uploads/2020/04/Screen-Shot-2020-04-22-at-14.47.38.png" alt="Товар 1">
-            <h2>Red Monster</h2>
-            <p>description</p>
-            <p>Price: 50 coins</p>
-            <p>Work: 5 coin/min</p>
-        </div>
-        <div class="product-card">
-            <img src="https://i.pinimg.com/originals/09/d9/ac/09d9ac6a5c967f20f4b843630cb16680.jpg" alt="Товар 2">
-            <h2>Yellow Monster</h2>
-            <p>description</p>
-            <p>Price: 250 coins</p>
-            <p>Work: 30 coin/min</p>
-        </div>
-        <!-- Добавьте другие товары здесь -->
+        {% for monster in object_list %}
+            <div class="product-card">
+                <img src="https://freestuff.co.uk/wp-content/uploads/2020/04/Screen-Shot-2020-04-22-at-14.47.38.png" alt="Monster's view">
+                <h2>{{ monster.name }}</h2>
+                <p>{{ monster.description }}</p>
+                <p>Price: {{ monster.price }} coins</p>
+                <p>Work: {{ monster.productivity }} coin/min</p>
+            </div>
+        {% endfor %}
     </div>
 {% endblock %}

@@ -9,6 +9,9 @@ class Profile(models.Model):
     balance = models.IntegerField(default=1000)
     #avatar = models.ImageField()
 
+    def __str__(self) -> str:
+        return self.user
+
 
 @receiver(post_save, sender=User)
 def create_user_profile(sender, instance, created, **kwargs):
