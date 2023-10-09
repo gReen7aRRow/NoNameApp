@@ -1,0 +1,34 @@
+.product-detail {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+}
+
+.product-detail img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.product-detail h1 {
+    font-size: 2em;
+    margin: 10px 0;
+}
+
+.product-detail .description {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.product-detail .price {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.product-detail .productivity {
+    font-size: 1.2em;
+    margin: 10px 0;
+}

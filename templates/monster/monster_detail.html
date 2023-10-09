@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>{{ monster.name }}</title>
+{% endblock %}
+
+{% block content %}
+    <div class="product-detail">
+        <img src="product_image.jpg" alt="Monster's view">
+        <h1>{{ monster.name }}</h1>
+        <p class="description">{{ monster.description }}</p>
+        <p class="price">Price: {{ monster.name }}</p>
+        <p class="productivity">Productivity: {{ monster.productivity }} coins/min</p>
+    </div>
+{% endblock %}

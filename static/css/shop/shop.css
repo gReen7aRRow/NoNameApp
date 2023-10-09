@@ -23,9 +23,10 @@
     margin-bottom: 10px;
 }
 
-.product-card h2 {
+.product-card a {
     font-size: 1.5em;
     margin: 10px 0;
+    text-decoration: none;
 }
 
 .product-card p {
