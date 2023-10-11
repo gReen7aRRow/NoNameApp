@@ -7,7 +7,7 @@
 {% block content %}
     <div class="profile-container">
         <div class="profile-header">
-            <img src="https://sopranoclub.ru/images/memy-na-avu-275-memnyh-avatarok/file56870.jpeg" alt="Аватар" class="avatar">
+            <img src="{{ user.profile.avatar.url }}" alt="Аватар" class="avatar">
             <h1>{{ user.username }}</h1>
         </div>
         <div class="profile-description">

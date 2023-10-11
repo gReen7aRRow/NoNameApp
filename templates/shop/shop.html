@@ -8,11 +8,11 @@
     <div class="product-list">
         {% for monster in monsters %}
             <div class="product-card">
-                <img src="https://freestuff.co.uk/wp-content/uploads/2020/04/Screen-Shot-2020-04-22-at-14.47.38.png" alt="Monster's view">
+                <img src="{{ monster.image.url }}" alt="Monster's view">
                 <a href="{% url 'monster-detail' pk=monster.id %}">{{ monster.name }}</a>
                 <p>{{ monster.description }}</p>
                 <p>Price: {{ monster.price }} coins</p>
-                <p>Work: {{ monster.productivity }} coin/min</p>
+                <p>Productivity: {{ monster.productivity }} coin/min</p>
             </div>
         {% endfor %}
     </div>
