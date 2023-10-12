@@ -10,9 +10,9 @@
             <div class="product-card">
                 <img src="{{ monster.image.url }}" alt="Monster's view">
                 <a href="{% url 'monster-detail' pk=monster.id %}">{{ monster.name }}</a>
-                <p>{{ monster.description }}</p>
-                <p>Price: {{ monster.price }} coins</p>
-                <p>Productivity: {{ monster.productivity }} coin/min</p>
+                <p><i>{{ monster.description }}</i></p>
+                <p><b>Price: </b>{{ monster.price }} coins</p>
+                <p><b>Productivity: </b>{{ monster.productivity }} coin/min</p>
             </div>
         {% endfor %}
     </div>
