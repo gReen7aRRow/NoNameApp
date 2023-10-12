@@ -1,12 +1,10 @@
-from typing import Any
-from django.db.models.query import QuerySet
 from django.views.generic.list import ListView
 from ..monster.models import Monster
 
 
 class ShopListView(ListView):
 
-    model = Monster.objects.order_by('price')
+    model = Monster
     template_name = 'shop/shop.html'
     context_object_name = 'monsters'
 

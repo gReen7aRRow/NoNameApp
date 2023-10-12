@@ -43,3 +43,40 @@
 .profile-posts li {
     margin-bottom: 10px;
 }
+
+.monster-list {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    justify-content: space-around;
+}
+
+.monster-card {
+    width: calc(30% - 10px);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px 0;
+    padding: 10px;
+    text-align: center;
+}
+
+.monster-card img {
+    width: 180px;
+    height: 150px;
+}
+
+.monster-name {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.monster-description {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.monster-productivity, .monster-quantity {
+    font-size: 1rem;
+    margin: 5px 0;
+}

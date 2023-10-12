@@ -9,7 +9,7 @@ class Profile(models.Model):
     description = models.TextField(max_length=200, blank=True)
     balance = models.IntegerField(default=1000)
     avatar = models.ImageField(upload_to='images/avatars/', default='images/avatars/avatar.jpeg')
-    monster_counter = models.JSONField(default=get_default_dict)
+    monster_counter = models.JSONField(default=get_default_dict, blank=True)
 
     def __str__(self) -> str:
         return str(self.user)

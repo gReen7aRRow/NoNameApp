@@ -8,8 +8,8 @@
     <div class="product-detail">
         <img src="{{ monster.image.url }}" alt="Monster's view">
         <h1>{{ monster.name }}</h1>
-        <p class="description">{{ monster.description }}</p>
-        <p class="price">Price: {{ monster.name }}</p>
-        <p class="productivity">Productivity: {{ monster.productivity }} coins/min</p>
+        <p class="description"><i>{{ monster.description }}</i></p>
+        <p class="price"><b>Price: </b>{{ monster.price }}</p>
+        <p class="productivity"><b>Productivity: </b>{{ monster.productivity }} coins/min</p>
     </div>
 {% endblock %}

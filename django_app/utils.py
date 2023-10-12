@@ -8,4 +8,5 @@ def get_default_dict():
         "yellow_monster": 0,
         "blue_monster": 0,
         "black_monster": 0,
+        "white_monster": 0,
     }
