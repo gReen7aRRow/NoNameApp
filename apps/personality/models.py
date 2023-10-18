@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from apps.monster.models import Monster, MonsterCounter
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 
@@ -21,3 +22,10 @@ def create_user_profile(sender, instance, created, **kwargs):
 @receiver(post_save, sender=User)
 def save_user_profile(sender, instance, **kwargs):
     instance.profile.save()
+
+@receiver(post_save, sender=User)
+def create_monster_counter(sender, instance, created, **kwargs):
+    if created:
+        monsters = Monster.objects.all()
+        for monster in monsters:
+            MonsterCounter.objects.create(owner=instance, monster=monster)
