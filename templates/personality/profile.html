@@ -13,7 +13,6 @@
         <div class="profile-description">
             {% if user.profile.description %}
                 <p>{{ user.profile.description }}</p>
-                <p>{{ user.profile.monster_counter }}</p>
             {% else %}
                 <p>Добавить описание.</p>
             {% endif %}
@@ -21,13 +20,13 @@
         <div class="profile-posts">
             <h2>MyMonsters</h2>
             <ul class="monster-list">
-                {% for monster in monsters %}
+                {% for monster, quantity in monster_data.items %}
                     <li class="monster-card">
                         <img src="{{ monster.image.url }}" alt="Monster's view">
                         <h3 class="monster-name">{{ monster.name }}</h3>
                         <p class="monster-description">{{ monster.description }}</p>
                         <p class="monster-productivity"><b>Productivity: </b>{{ monster.productivity }} coins/min</p>
-                        <p class="monster-quantity"><b>In stock: </b>0</p>
+                        <p class="monster-quantity"><b>In stock: </b>{{ quantity }}</p>
                     </li>
                 {% endfor %}
             </ul>
