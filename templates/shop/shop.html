@@ -13,6 +13,16 @@
                 <p><i>{{ monster.description }}</i></p>
                 <p><b>Price: </b>{{ monster.price }} coins</p>
                 <p><b>Productivity: </b>{{ monster.productivity }} coin/min</p>
+                <div class="buy-section">
+                    <form method="post" action="">
+                        {% csrf_token %}
+                        <div class="quantity">
+                            <label for="quantity">Quantity:</label>
+                            <input type="number" id="quantity" name="quantity" value="1" min="1">
+                            <button class="buy-button" type="submit">Buy</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         {% endfor %}
     </div>

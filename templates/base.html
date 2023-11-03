@@ -22,6 +22,8 @@
                 </div>
                 <ul class="nav-menu">
                     {% if user.is_authenticated %}
+                        <!-- Место для баланса -->
+                        <li class="balance">Balance: {{ user.profile.balance }}</li>
                         <li><a href="{% url 'shop' %}" class="menu-link">MyShop</a></li>
                         <li><a href="{% url 'profile' %}" class="menu-link">MyProfile</a></li>
                         <li><a href="{% url 'logout' %}" class="auth-link">Logout</a></li>

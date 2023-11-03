@@ -81,3 +81,9 @@ body {
     background-color: #c9302c;
     color: #fff;
 }
+
+.balance {
+    color: #000;
+    font-weight: bold;
+    margin-right: 10px;
+}
