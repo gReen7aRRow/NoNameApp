@@ -83,6 +83,7 @@ body {
 }
 
 .balance {
-    color: #000;
+    color: #ffffff;
     font-weight: bold;
+    margin: 10px;
 }
