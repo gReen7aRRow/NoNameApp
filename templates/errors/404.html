@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/errors/404.css' %}">
+
+    <title>404 - Page Not Found</title>
+</head>
+<body>
+    <div class="error-container">
+        <div class="error-code">404</div>
+        <div class="error-message">Page Not Found</div>
+        <p>Sorry, the page you requested does not exist.</p>
+        <a href="/" class="back-link">Back to Home</a>
+    </div>
+</body>
+</html>
