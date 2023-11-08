@@ -14,7 +14,7 @@
                 <p><b>Price: </b>{{ monster.price }} coins</p>
                 <p><b>Productivity: </b>{{ monster.productivity }} coin/min</p>
                 <div class="buy-section">
-                    <form method="post" action="">
+                    <form method="post" action="{% url 'buy-monster' pk=monster.id %}">
                         {% csrf_token %}
                         <div class="quantity">
                             <label for="quantity">Quantity:</label>
