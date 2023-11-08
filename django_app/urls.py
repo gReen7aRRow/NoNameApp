@@ -15,11 +15,13 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import path, include, re_path
 from django.conf import settings
 from django.conf.urls.static import static
+from django.views.static import serve 
+from apps.main import views
 
-handler404 = 'apps.main.views.page_not_found_view'
+handler404 = views.page_not_found_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -28,7 +30,9 @@ urlpatterns = [
     path('', include('apps.account.urls')),
     path('', include('apps.personality.urls')),
     path('', include('apps.shop.urls')),
-    path('', include('apps.monster.urls'))
+    path('', include('apps.monster.urls')),
+    re_path(r'^media/(?P<path>.*)$', serve,{'document_root': settings.MEDIA_ROOT}), 
+    re_path(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}), 
 ]
 
 if settings.DEBUG:
