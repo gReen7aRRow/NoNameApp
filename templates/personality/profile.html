@@ -28,6 +28,14 @@
                         <p class="monster-productivity"><b>Productivity: </b>{{ monster.monster.productivity }} coins/min</p>
                         <p class="monster-quantity"><b>In stock: </b>{{ monster.quantity }}</p>
                         <p class="monster-wealth"><b>Total earned: </b>{{ monster.wealth }}</p>
+                        
+                        {% if monster.quantity > 0 %}
+                            <div class="counter-container">
+                                <form method="post" action="">
+                                    <button id="reset-button">Collect</button>
+                                </form>
+                            </div>
+                        {% endif %}
                     </li>
                 {% endfor %}
             </ul>

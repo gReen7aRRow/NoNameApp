@@ -80,3 +80,23 @@
     font-size: 1rem;
     margin: 5px 0;
 }
+
+.counter-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#reset-button {
+    background-color: #009A63;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    text-align: right;
+}
+
+#reset-button:hover {
+    background-color: #006633;
+}
