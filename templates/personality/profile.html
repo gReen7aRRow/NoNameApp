@@ -20,13 +20,14 @@
         <div class="profile-posts">
             <h2>MyMonsters</h2>
             <ul class="monster-list">
-                {% for monster, quantity in monster_data.items %}
+                {% for monster in monsters %}
                     <li class="monster-card">
-                        <img src="{{ monster.image.url }}" alt="Monster's view">
-                        <h3 class="monster-name">{{ monster.name }}</h3>
-                        <p class="monster-description">{{ monster.description }}</p>
-                        <p class="monster-productivity"><b>Productivity: </b>{{ monster.productivity }} coins/min</p>
-                        <p class="monster-quantity"><b>In stock: </b>{{ quantity }}</p>
+                        <img src="{{ monster.monster.image.url }}" alt="Monster's view">
+                        <h3 class="monster-name">{{ monster.monster.name }}</h3>
+                        <p class="monster-description">{{ monster.monster.description }}</p>
+                        <p class="monster-productivity"><b>Productivity: </b>{{ monster.monster.productivity }} coins/min</p>
+                        <p class="monster-quantity"><b>In stock: </b>{{ monster.quantity }}</p>
+                        <p class="monster-wealth"><b>Total earned: </b>{{ monster.wealth }}</p>
                     </li>
                 {% endfor %}
             </ul>

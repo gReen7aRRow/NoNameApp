@@ -76,7 +76,7 @@
     color: #777;
 }
 
-.monster-productivity, .monster-quantity {
+.monster-productivity, .monster-quantity, .monster-wealth {
     font-size: 1rem;
     margin: 5px 0;
 }
