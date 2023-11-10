@@ -19,7 +19,7 @@ class RegisterUserView(FormView):
     success_url = reverse_lazy('index')
 
     def form_valid(self, form):
-        
+
         form.save()
 
         username = self.request.POST['username']

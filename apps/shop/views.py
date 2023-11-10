@@ -3,7 +3,6 @@ from ..monster.models import Monster, MonsterCounter
 from django.shortcuts import get_object_or_404, redirect
 
 
-
 class ShopListView(ListView):
 
     model = Monster
@@ -12,7 +11,7 @@ class ShopListView(ListView):
 
     def get_queryset(self):
         return Monster.objects.order_by('price')
-    
+
 
 def buy_monster(request, pk):
     monster = get_object_or_404(Monster, pk=pk)
@@ -26,9 +25,9 @@ def buy_monster(request, pk):
         counter.quantity += quantity
 
         request.user.save()
-        counter.save()        
+        counter.save()
 
         return redirect('profile')
-    
+
     else:
         return redirect('shop')

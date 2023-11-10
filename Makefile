@@ -6,5 +6,7 @@ migrate:
 	python3 manage.py migrate
 static:
 	python3 manage.py collectstatic
+lint:
+	flake8 django_app apps
 
-.PHONY: run makemigrations migrate static
+.PHONY: run makemigrations migrate static lint

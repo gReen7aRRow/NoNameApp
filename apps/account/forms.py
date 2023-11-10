@@ -6,7 +6,7 @@ class AccountLoginForm(AuthenticationForm):
 
 
 class AccountRegisterForm(UserCreationForm):
-    
+
     def __init__(self, *args, **kwargs):
         super(AccountRegisterForm, self).__init__(*args, **kwargs)
         for fieldname in ['username', 'password1', 'password2']:
