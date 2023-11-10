@@ -31,7 +31,8 @@
                         
                         {% if monster.quantity > 0 %}
                             <div class="counter-container">
-                                <form method="post" action="">
+                                <form method="post" action="{% url 'collect-coins' pk=monster.monster.id %}">
+                                    {% csrf_token %}
                                     <button id="reset-button">Collect</button>
                                 </form>
                             </div>
