@@ -1,14 +1,14 @@
 {% extends 'base_errors.html' %}
 
 {% block title %}
-    <title>404 - Page Not Found</title>
+    <title>403 - Forbidden</title>
 {% endblock %}
 
 {% block content %}
     <div class="error-container">
-        <div class="error-code">404</div>
-        <div class="error-message">Page Not Found</div>
-        <p>Sorry, the page you requested does not exist.</p>
+        <div class="error-code">403</div>
+        <div class="error-message">Forbidden</div>
+        <p>Sorry, access to this page is limited.</p>
         <a href="/" class="back-link">Back to Home</a>
     </div>
 {% endblock %}

@@ -15,3 +15,13 @@ def page_not_found_view(
     return render(request,
                   template_name,
                   status=404)
+
+
+def forbidden_view(
+        request,
+        exception,
+        template_name='errors/403.html'):
+    
+    return render(request,
+                  template_name,
+                  status=403)

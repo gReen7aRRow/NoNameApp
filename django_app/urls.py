@@ -21,6 +21,7 @@ from django.conf.urls.static import static
 from django.views.static import serve
 from apps.main import views
 
+handler403 = views.forbidden_view
 handler404 = views.page_not_found_view
 
 urlpatterns = [
