@@ -35,6 +35,10 @@
                                     {% csrf_token %}
                                     <button id="reset-button">Collect</button>
                                 </form>
+                                <form method="post" action="{% url 'working' pk=monster.monster.id %}">
+                                    {% csrf_token %}
+                                    <button class="refresh-btn">Work</button>
+                                </form>
                             </div>
                         {% endif %}
                     </li>

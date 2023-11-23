@@ -100,3 +100,18 @@
 #reset-button:hover {
     background-color: #006633;
 }
+
+.refresh-btn {
+    background-color: rgb(228, 171, 48);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer; 
+    margin-left: 10px;
+    text-align: center;
+  }
+
+  .refresh-btn:hover {
+    background-color: rgb(175, 130, 34);
+  }
